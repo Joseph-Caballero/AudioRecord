@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Audio Recorder",
+  "version": "1.0",
+  "description": "Record audio from a Chrome tab and save it as an MP3 file",
+  "permissions": [
+    "tabCapture",
+    "downloads",
+    "storage",
+    "tabs"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["background.js", "lame.min.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["lame.min.js"]
+    }
+  ]
+}

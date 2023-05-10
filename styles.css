@@ -1,0 +1,32 @@
+#mainContainer {
+    width: 300px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    border: solid #aa0404;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#filePathContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    background-color: #aa0404;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    font-size: 13px;
+    margin: 4px 2px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
