@@ -13,12 +13,16 @@ document.addEventListener('DOMContentLoaded', () => {
 		port.onMessage.addListener(function (msg) {
 			console.log(msg.message);
 			if (msg.message === `You sent startRecording to the background!`) {
-				startRecordingButton.style.background = '#FF5252';
-				startRecordingButton.style.boxShadow = '2px 2px 4px #000000';
+				startRecordingButton.style.background = '#FF7070';
+				startRecordingButton.style.boxShadow = '0px 0px 0px 2px #333333';
+				startRecordingButton.style.color = '#E4E4E4';
+				startRecordingButton.style.border = '3px outset #fc5555';
 			}
 			if (msg.message === `You sent stopRecording to the background!`) {
-				startRecordingButton.style.backgroundColor = '#999999';
-				startRecordingButton.style.boxShadow = '1px 1px 2px #000000';
+				startRecordingButton.style.backgroundColor = '#fd3c3c';
+				startRecordingButton.style.boxShadow = '2px 2px 4px #000000';
+				startRecordingButton.style.color = '#FFFFFF';
+				startRecordingButton.style.border = '3px outset #ff2a2a';
 			}
 		});
 	});
