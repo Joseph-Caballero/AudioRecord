@@ -1,12 +1,5 @@
-async function convertAndDownload(recordedChunks) {
+function convertAndDownload(recordedChunks) {
 	let blob = new Blob(recordedChunks, { type: 'audio/webm' });
-
-	// webM to mp3 *** Not working ***
-	// let audioBuffer = await blobToAudioBuffer(blob);
-	// const mp3Data = encodeAudioBufferToMp3(audioBuffer);
-	// let mp3Blob = new Blob(mp3Data, { type: 'audio/mp3' });
-	// let url = URL.createObjectURL(mp3Blob);
-	// let downloadName = `recorded_audio_${Date.now()}.mp3`;
 
 	let url = URL.createObjectURL(blob);
 	let downloadName = `recorded_audio_${Date.now()}.webm`;
@@ -37,7 +30,6 @@ function recordAudio(stream) {
 		await convertAndDownload(recordedChunks);
 		recordedChunks = [];
 		stopTabCapture(stream);
-		// console log the mediaRecorder state
 	};
 }
 
@@ -60,9 +52,6 @@ chrome.runtime.onConnect.addListener(function (port) {
 
 	port.onMessage.addListener(function (msg) {
 		port.postMessage({ message: `You sent ${msg.message} to the background!` });
-		// port.postMessage({
-		// 	message: `tabcapturestate start ${chrome.tabCapture.TabCaptureState}`,
-		// });
 		if (msg.message === 'startRecording') {
 			// Start recording
 			chrome.tabs.query({ active: true }, (tabs) => {
@@ -94,7 +83,6 @@ chrome.runtime.onConnect.addListener(function (port) {
 			// Stop recording
 			if (mediaRecorder && mediaRecorder.state === 'recording') {
 				mediaRecorder.stop();
-				// port.postMessage({ message: chrome.tabCapture });
 			}
 		}
 	});

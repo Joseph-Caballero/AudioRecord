@@ -7,10 +7,18 @@ document.addEventListener('DOMContentLoaded', () => {
 	startRecordingButton.addEventListener('click', () => {
 		console.log('start button clicked!');
 		// chrome.runtime.sendMessage({ action: 'startRecording' });
+
 		port.postMessage({ message: 'startRecording' });
 
 		port.onMessage.addListener(function (msg) {
 			console.log(msg.message);
+			if (msg.message === `You sent startRecording to the background!`) {
+				startRecordingButton.style.backgroundColor = '#FF5252';
+				startRecordingButton.style.boxShadow = '2px 2px 4px #000000';
+			}
+			if (msg.message === `You sent stopRecording to the background!`) {
+				startRecordingButton.style.backgroundColor = '#cccccc';
+			}
 		});
 	});
 
