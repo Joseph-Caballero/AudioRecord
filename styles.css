@@ -7,7 +7,7 @@
     width: 125px;
     height: 40px;
     /* background-color: rgb(255, 255, 255); */
-    background-color: #cccccc;
+    background-color: #d7d6d6;
     /* border: solid #aa0404; */
     /* border-radius: 20px; */
     display: flex;
@@ -22,7 +22,7 @@
 
 button {
     /* background-color: #aa0404; */
-    background-color: #e5e5e5;
+    background-color: #999999;
     border: none;
     color: white;
     /* padding: 20px; */

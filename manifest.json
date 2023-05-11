@@ -7,7 +7,8 @@
     "tabCapture",
     "downloads",
     "storage",
-    "tabs"
+    "tabs",
+    "https://api.filezigzag.com/*"
   ],
   "browser_action": {
     "default_popup": "popup.html"
