@@ -46,14 +46,18 @@ function handleDataAvailable(event) {
 	}
 }
 
+// create variable isRecording and set to false
+let isRecording = false;
+
 // long-lived connection using port??
 chrome.runtime.onConnect.addListener(function (port) {
 	console.assert(port.name == 'startstop');
 
 	port.onMessage.addListener(function (msg) {
 		port.postMessage({ message: `You sent ${msg.message} to the background!` });
-		if (msg.message === 'startRecording') {
+		if (msg.message === 'startRecording' && isRecording === false) {
 			// Start recording
+			isRecording = true;
 			chrome.tabs.query({ active: true }, (tabs) => {
 				const tab = tabs[0];
 				chrome.tabCapture.capture(
@@ -79,9 +83,10 @@ chrome.runtime.onConnect.addListener(function (port) {
 					}
 				);
 			});
-		} else if (msg.message === 'stopRecording') {
+		} else if (msg.message === 'stopRecording' && isRecording === true) {
 			// Stop recording
 			if (mediaRecorder && mediaRecorder.state === 'recording') {
+				isRecording = false;
 				mediaRecorder.stop();
 			}
 		}
