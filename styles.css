@@ -6,13 +6,7 @@
 #mainContainer {
     width: 125px;
     height: 40px;
-    /* background-color: rgb(255, 255, 255); */
-    /* background-color: #d7d6d6; */
-    /* background-image: url('/background.svg'); */
-    /* background-image: url('/background2.svg'); */
     background-color: #000000;
-    /* border: solid #aa0404; */
-    /* border-radius: 20px; */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -24,18 +18,13 @@
 }
 
 button {
-    /* background-color: #aa0404; */
     background-color: #fd3c3c;
     border: none;
     color: white;
-    /* padding: 20px; */
     text-decoration: none;
-    /* display: inline-block; */
-    /* background-image: url('/button.svg'); */
     height: 25px;
     width: 50px;
     font-size: 12px;
-    /* margin: 4px 2px; */
     border-radius: 100px;
     display: flex;
     justify-content: center;
@@ -47,7 +36,6 @@ button {
 button:hover {
   background-color: rgb(255, 112, 112);
   color: rgb(228, 228, 228);
-  /* color: white; */
   box-shadow: 0px 0px 0px 2px #333333;
   cursor: pointer;
   border: 3px outset #fc5555;
