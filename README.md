@@ -1,6 +1,22 @@
-# Chrome Extension: AudioRecord
+<div align='center'>
+  
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-The AudioRecord Chrome Extension allows you to effortlessly record audio from the current tab in your Google Chrome/Brave browser. This extension provides a simple and efficient way to capture audio from websites, podcasts, music, or any other audio source playing in your browser.
+</div>
+
+---
+
+<div align='center'>
+
+• [Introduction](#introduction)• [Features](#features) • [Installation](#installation) • [Usage](#usage) • [Privacy and Permissions](#privacy-and-permissions) • [License](#license) •
+
+</div>
+
+## Introduction
+
+The AudioRecord Chrome Extension provides a simple and efficient way to capture audio from websites, podcasts, music, or any other audio source playing in your Chrome/Brave browser.
 
 ## Features
 
