@@ -11,10 +11,11 @@
     "https://api.filezigzag.com/*"
   ],
   "browser_action": {
-    "default_popup": "popup.html"
+    "default_popup": "./app/popup.html"
   },
   "background": {
-    "scripts": ["background.js"],
+    "type": "module",
+    "scripts": ["app/background.js"],
     "persistent": false
   }
 }
