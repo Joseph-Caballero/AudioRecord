@@ -1,4 +1,4 @@
-<div align='center'><img width="autopx" src='./images/Record.png'/></div>
+<div align='center'><img width="autopx" src='./public/Record.png'/></div>
 
 ---
 
